@@ -1,0 +1,130 @@
+\documentclass[parskip=full]{scrartcl}
+\usepackage[inner=2cm,outer=2cm,top=2.5cm,bottom=2.5cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{physics}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{ulem}
+\usepackage{mathrsfs}
+\usepackage{amsthm}
+\usepackage{siunitx}
+\usepackage{tikz}
+\usepackage{enumitem}
+\usepackage{quiver}
+\usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage{bm}
+\usepackage[section]{placeins}
+\usepackage{graphicx}
+\graphicspath{ {./image/} }
+\DeclareMathSymbol{\sm}{\mathbin}{AMSa}{"39}
+\usetikzlibrary{decorations.markings}
+\makeatletter
+\renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
+  \hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{#1}}
+\makeatother
+\makeatletter
+\renewcommand*\env@matrix[1][\arraystretch]{%
+  \edef\arraystretch{#1}%
+  \hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{*\c@MaxMatrixCols c}}
+\makeatother
+\newcommand{\myeq}{\mathrel{\overset{\makebox[0pt]{\mbox{\normalfont\tiny\sffamily def}}}{=}}}
+\newcolumntype{C}{>{$}c<{$}}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\RP}{\mathbb R\mathbb P}
+\newcommand{\Mat}{\text{Mat}}
+\newcommand{\Aut}{\text{Aut}}
+\newcommand{\dvolg}{\text{dvol}_g}
+\renewcommand{\L}{\mathscr{L}}
+\newcommand{\Id}{\text{Id}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Hom}{\text{Hom}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\K}{\mathbb{K}}
+\newcommand{\Oplus}{\bigoplus}
+\newcommand{\Otimes}{\bigotimes}
+\newcommand{\End}{\text{End}}
+\newcommand{\sbullet}[1][.5]{\mathbin{\vcenter{\hbox{\scalebox{#1}{$\bullet$}}}}}
+\newlist{problems}{enumerate}{1}
+\setlist[problems,1]{label=\roman*), leftmargin=2em, itemsep=1.5em}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\numberwithin{equation}{section}
+\theoremstyle{definition}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}{Definition}[section]
+\providecommand*\definitionautorefname{Definition}
+\providecommand*\lemmaautorefname{Lemma}
+\providecommand*\propositionautorefname{Proposition}
+\providecommand*\exampleautorefname{Example}
+
+\title{Calculus I}
+\subtitle{Challenge Homework Set I}
+\author{}
+\date{\today}
+\setkomafont{subtitle}{\normalfont\Large}
+\setkomafont{title}{\normalfont\large}
+\setkomafont{section}{\normalfont\large}
+\setkomafont{subsection}{\normalfont\large}
+\setkomafont{subsubsection}{\normalfont\large}
+
+\begin{document}
+\maketitle
+Provide \textbf{handwritten} answers on a separate sheet of paper. Typed answers will not be accepted.
+For full credit correct answers should be clear, legible, include explanations for your reasoning, and 
+show all relevant work. You are allowed to make use of outside resources, including the internet, and
+friends, but you must cite your sources.
+\textbf{Textbook Problems}:
+
+Ch 4: 113-128, 316,  322, 338-340
+\begin{problems}
+  \item Find the critical points of the following functions, and evaluate whether the 
+  critical points are maxima or minima. 
+  \begin{itemize}
+    \item [$a)$]$\cos (2x)$
+    \item [$b)$] $\sin (5x)$
+    \item [$c)$] $\sin (|x|)$
+    \item [$d)$] $|\cos x|$
+  \end{itemize}
+  \item In this problem we consider optimizing the volume or surface area of certain shapes. \textbf{Hint:} Draw pictures!
+  \begin{itemize}
+    \item [$a)$] Find the largest volume of a cylinder that fits into a cone of radius $r$ 
+    and height $h$.
+    \item [$b)$] Find the dimensions of a cylinder with volume $16\pi\operatorname{m}^2$ that has the largest surface area.
+    \item [$c)$] Find the dimensions of a right cone with surface area $4\pi\operatorname{m}^2$ that has the largest volume.
+    \item [$d)$] Suppose that total surface area of a cube and and sphere is $1\operatorname{m}^3$. Find the dimensions 
+    of the cube and sphere such that the total volume is maximized.
+  \end{itemize}
+  \item For this problem recall that $(x_1,y_1)$ and $(x_2,y_2)$ are two points in the plane, then the 
+  distance between them is given by:
+  \begin{align*}
+    d=\sqrt{(x_1-x_2)^2+(y_1-y_2)^2}
+  \end{align*}
+  Using this, answer the following questions:
+  \begin{itemize}
+    \item Where is the line $y=5-2x$ closest to the origin?
+    \item Where is the parabola $y=x^2$ closest to the point $(2,0)$?
+    \item Where is the cubic $y=x^3$ closest to the point $(2,2)$?
+  \end{itemize}
+  \item An object with mass $m$ is dragged along a horizontal
+  plane by a force acting along a rope attached to the object.
+  If the rope makes an angle $\theta$ with a plane, then the magnitude of the force is:
+  \begin{align*}
+    F=\frac{\mu m g}{\mu \sin \theta+\cos\theta}
+  \end{align*}
+  where $g$ is the acceleration due to gravity, and $\mu$ is a dimensionless 
+  constant called the coefficient of friction. For what value of $\theta$ 
+  is $F$ minimized?
+\end{problems}
+\end{document}
+
+
